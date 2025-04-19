@@ -1,4 +1,10 @@
-
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #f5f8fa;
+  color: #333;
+}
 
 header {
   background-color: #003366;
