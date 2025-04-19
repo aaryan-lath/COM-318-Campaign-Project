@@ -6,54 +6,22 @@ body {
 }
 
 header.hero {
-  position: relative;
+  background: url('moon_pic.jpg') center center/cover no-repeat;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #000;
   color: white;
-}
-
-.image-stack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.hero-img {
-  position: absolute;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
-}
-
-.hero-img.moon {
-  left: 0;
-  width: 25%;
-  object-position: left;
-}
-
-.hero-img.saturn {
-  right: 0;
-  width: 25%;
-  object-position: right;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 2;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .hero-btn {
@@ -86,6 +54,14 @@ section {
 
 h2 {
   color: #003366;
+}
+
+img.inline-img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
 }
 
 button {
