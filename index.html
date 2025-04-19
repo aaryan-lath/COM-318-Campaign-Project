@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Make America Technologically Advanced Again</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .carousel-wrapper {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .carousel-item {
+      display: none;
+    }
+    .carousel-item.active {
+      display: block;
+    }
+    .carousel button {
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
@@ -21,19 +38,40 @@
         <li><strong>National Security:</strong> NASA technologies support defense operations and secure satellite communications.</li>
         <li><strong>Climate Monitoring:</strong> Real-time tracking of environmental and disaster data worldwide.</li>
       </ul>
-      <div style="margin-top: 1.5rem;">
-        <h3>Watch the impact it has on society</h3>
-        <iframe src="https://www.youtube.com/embed/lARpY0nIQx0" allowfullscreen></iframe>
-      </div>
     </section>
 
     <section id="carousel">
       <h2>Did You Know?</h2>
-      <div class="carousel">
-        <div><img src="CAT-Scans.jpg" alt="CAT Scans"><a href="https://news.sky.com/story/happy-birthday-nasa-celebrating-60-years-of-space-exploration-11451070" target="_blank"><button>Learn More</button></a></div>
-        <div><img src="Land-Mine.jpg" alt="Land Mine Removal"><a href="https://news.sky.com/story/happy-birthday-nasa-celebrating-60-years-of-space-exploration-11451070" target="_blank"><button>Learn More</button></a></div>
-        <div><img src="Phones.jpg" alt="Camera Phones"><a href="https://news.sky.com/story/happy-birthday-nasa-celebrating-60-years-of-space-exploration-11451070" target="_blank"><button>Learn More</button></a></div>
-        <div><img src="Shoes.jpg" alt="Athletic Shoes"><a href="https://news.sky.com/story/happy-birthday-nasa-celebrating-60-years-of-space-exploration-11451070" target="_blank"><button>Learn More</button></a></div>
+      <div class="carousel-wrapper">
+        <div class="carousel-item active">
+          <img src="CAT-Scans.jpg" alt="CAT Scans">
+          <a href="https://news.sky.com/story/happy-birthday-nasa-celebrating-60-years-of-space-exploration-11451070" target="_blank"><button>Learn More</button></a>
+        </div>
+        <div class="carousel-item">
+          <img src="Land-Mine.jpg" alt="Land Mine Removal">
+          <a href="https://news.sky.com/story/happy-birthday-nasa-celebrating-60-years-of-space-exploration-11451070" target="_blank"><button>Learn More</button></a>
+        </div>
+        <div class="carousel-item">
+          <img src="Phones.jpg" alt="Camera Phones">
+          <a href="https://news.sky.com/story/happy-birthday-nasa-celebrating-60-years-of-space-exploration-11451070" target="_blank"><button>Learn More</button></a>
+        </div>
+        <div class="carousel-item">
+          <img src="Shoes.jpg" alt="Athletic Shoes">
+          <a href="https://news.sky.com/story/happy-birthday-nasa-celebrating-60-years-of-space-exploration-11451070" target="_blank"><button>Learn More</button></a>
+        </div>
+      </div>
+      <script>
+        let index = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        setInterval(() => {
+          items[index].classList.remove('active');
+          index = (index + 1) % items.length;
+          items[index].classList.add('active');
+        }, 4000);
+      </script>
+      <div style="margin-top: 2rem;">
+        <h3>Watch the impact it has on society</h3>
+        <iframe src="https://www.youtube.com/embed/lARpY0nIQx0" allowfullscreen></iframe>
       </div>
     </section>
 
